@@ -1,0 +1,6 @@
+Hello, world!
+[Image: picture.jpg]
+This is a document editor.
+byee byee world!
+[Image: image.jpg]
+This is a very good document.
