@@ -1,4 +1,4 @@
-commit: chore: about this project
+# ============commit: chore: about this project============
 
 HOW TO VIEW THIS PROJECT: Each commit in readme file is actual commit in the repository.
 
@@ -6,7 +6,7 @@ HOW TO VIEW THIS PROJECT: Each commit in readme file is actual commit in the rep
 - Starting with bad design of google docs system design, we will improve it step by step.
 - Each commit in this repo will have a small improvement in the design pattern.
 
-commit: feat: bad design
+# ============commit: feat: bad design============
 
 # (ABSTRACTION):
 
@@ -24,8 +24,14 @@ Note: these contract or common interface (methods with same name and way of call
 ## SINGLE RESPONSIBILITY PRINCIPLE (SRP)
 DcoumnetEditor is meant to manage (add, render, or update content) a document. But currently, doing file operations, caring about how differnt types of content will be rendered or created.
 
+# ===============feat: Bad-Design update===============
 
-## OPEN/CLOSED PRINCIPLE (OCP)
-Already written behavior should not change. But in our case since render method have cases, for each type of content, as new type of content is added, we have to modify render method, which violates SRP.
+## OPEN/CLOSED PRINCIPLE (OCP) - single reason to change
+- Already written behavior should not change. DcoumentEditor is meant to manage (add, 
+  render, or update content) a document. It should only change when internal structure ( like if we start using difffernt ds to store elements) changes.
+- But in our case since render method have cases, for each type of content, as new type
+  of content is added, we have to modify render method, which violates SRP. 
+- Also if rendering text or image will change, we have to modify render methods for them 
+  which are defined inside DocumentEditor class, which violates SRP.
 
 
